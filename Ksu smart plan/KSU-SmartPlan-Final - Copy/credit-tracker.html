@@ -1,0 +1,1159 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | KSU SmartPlan</title>
+
+    <!-- Dashboard / Application CSS -->
+    <link rel="stylesheet" href="css/app.css">
+
+    <!-- Inter Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+</head>
+
+<body>
+
+<div class="app-layout">
+
+
+    <!-- =====================================================
+         FIXED COLLAPSIBLE SIDEBAR
+    ====================================================== -->
+    <aside class="sidebar" id="sidebar">
+
+        <!-- SIDEBAR TOP -->
+        <div class="sidebar-top">
+
+            <!-- BRAND -->
+            <a href="dashboard.html" class="sidebar-brand">
+
+                <div class="sidebar-logo">
+                    <img
+                        src="assets/ksu-smartplan-logo.png"
+                        alt="KSU SmartPlan"
+                    >
+                </div>
+
+                <div class="sidebar-brand-text">
+                    <h2>KSU SmartPlan</h2>
+                    <p>KYUNGSUNG UNIVERSITY</p>
+                </div>
+
+            </a>
+
+
+            <!-- NAVIGATION -->
+            <nav class="sidebar-nav">
+
+                <p class="nav-section-label">
+                    MAIN MENU
+                </p>
+
+
+                <!-- DASHBOARD -->
+                <a
+                    href="dashboard.html"
+                    class="nav-item active"
+                    data-tooltip="Dashboard"
+                >
+                    <span class="nav-icon">
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            aria-hidden="true"
+                        >
+                            <path d="M3 3h7v7H3V3zm11 0h7v7h-7V3zM3 14h7v7H3v-7zm11 0h7v7h-7v-7z"/>
+                        </svg>
+
+                    </span>
+
+                    <span class="nav-text">
+                        Dashboard
+                    </span>
+                </a>
+
+
+                <!-- COURSE FINDER -->
+                <a
+                    href="courses.html"
+                    class="nav-item"
+                    data-tooltip="Course Finder"
+                >
+                    <span class="nav-icon">
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            aria-hidden="true"
+                        >
+                            <path d="M4 4h16v3H4V4zm0 6h16v3H4v-3zm0 6h10v3H4v-3z"/>
+                        </svg>
+
+                    </span>
+
+                    <span class="nav-text">
+                        Course Finder
+                    </span>
+                </a>
+
+
+                <!-- TIMETABLE -->
+                <a
+                    href="timetable.html"
+                    class="nav-item"
+                    data-tooltip="Timetable"
+                >
+                    <span class="nav-icon">
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            aria-hidden="true"
+                        >
+                            <path d="M7 2h2v2h6V2h2v2h3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h3V2zm13 8H4v10h16V10z"/>
+                        </svg>
+
+                    </span>
+
+                    <span class="nav-text">
+                        Timetable
+                    </span>
+                </a>
+
+
+                <!-- CREDIT TRACKER -->
+                <a
+                    href="credit-tracker.html"
+                    class="nav-item"
+                    data-tooltip="Credit Tracker"
+                >
+                    <span class="nav-icon">
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            aria-hidden="true"
+                        >
+                            <path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm2 4v10h2V7H7zm4 4v6h2v-6h-2zm4-3v9h2V8h-2z"/>
+                        </svg>
+
+                    </span>
+
+                    <span class="nav-text">
+                        Credit Tracker
+                    </span>
+                </a>
+
+
+                <!-- GPA CALCULATOR -->
+                <a
+                    href="gpa-calculator.html"
+                    class="nav-item"
+                    data-tooltip="GPA Calculator"
+                >
+                    <span class="nav-icon">
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            aria-hidden="true"
+                        >
+                            <path d="M5 2h14a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm2 4v3h10V6H7zm0 6v2h2v-2H7zm4 0v2h2v-2h-2zm4 0v2h2v-2h-2zm-8 4v2h2v-2H7zm4 0v2h2v-2h-2zm4 0v2h2v-2h-2z"/>
+                        </svg>
+
+                    </span>
+
+                    <span class="nav-text">
+                        GPA Calculator
+                    </span>
+                </a>
+
+
+                <p class="nav-section-label second-label">
+                    ACCOUNT
+                </p>
+
+
+                <!-- PROFILE -->
+                <a
+                    href="profile.html"
+                    class="nav-item"
+                    data-tooltip="Profile"
+                >
+                    <span class="nav-icon">
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            aria-hidden="true"
+                        >
+                            <path d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10zm0 2c-5 0-9 2.5-9 5.5V22h18v-2.5C21 16.5 17 14 12 14z"/>
+                        </svg>
+
+                    </span>
+
+                    <span class="nav-text">
+                        Profile
+                    </span>
+                </a>
+
+
+                <!-- SETTINGS -->
+                <a
+                    href="settings.html"
+                    class="nav-item"
+                    data-tooltip="Settings"
+                >
+                    <span class="nav-icon">
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            aria-hidden="true"
+                        >
+                            <path d="M19.4 13a7.8 7.8 0 0 0 .1-1 7.8 7.8 0 0 0-.1-1l2.1-1.6-2-3.4-2.5 1a8 8 0 0 0-1.7-1L15 3.3h-4L10.6 6a8 8 0 0 0-1.7 1l-2.5-1-2 3.4L6.5 11a7.8 7.8 0 0 0-.1 1 7.8 7.8 0 0 0 .1 1l-2.1 1.6 2 3.4 2.5-1a8 8 0 0 0 1.7 1l.4 2.7h4l.4-2.7a8 8 0 0 0 1.7-1l2.5 1 2-3.4L19.4 13zM13 15.5A3.5 3.5 0 1 1 13 8a3.5 3.5 0 0 1 0 7.5z"/>
+                        </svg>
+
+                    </span>
+
+                    <span class="nav-text">
+                        Settings
+                    </span>
+                </a>
+
+            </nav>
+
+        </div>
+
+
+        <!-- SIDEBAR BOTTOM / USER -->
+        <div class="sidebar-bottom">
+
+            <div class="sidebar-divider"></div>
+
+            <div class="sidebar-user">
+
+                <div class="user-avatar" id="sidebarAvatar">
+                    S
+                </div>
+
+                <div class="user-info">
+
+                    <strong id="sidebarUserName">
+                        Student
+                    </strong>
+
+                    <span id="sidebarUserDepartment">
+                        KSU Student
+                    </span>
+
+                </div>
+
+                <button
+                    type="button"
+                    class="logout-button"
+                    id="logoutButton"
+                    aria-label="Sign out"
+                    title="Sign out"
+                >
+                    â†ª
+                </button>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         MAIN APPLICATION AREA
+    ====================================================== -->
+    <main class="main-content">
+
+
+        <!-- =================================================
+             TOP HEADER
+        ================================================== -->
+        <header class="topbar">
+
+            <div class="topbar-title">
+
+                <span class="page-label">
+                    OVERVIEW
+                </span>
+
+                <h1>Dashboard</h1>
+
+            </div>
+
+
+            <div class="topbar-actions">
+
+                <div class="semester-chip">
+                    <span class="semester-dot"></span>
+
+                    <span id="currentSemester">
+                        Current Semester
+                    </span>
+                </div>
+
+
+                <a
+                    href="profile.html"
+                    class="top-profile"
+                >
+
+                    <div class="top-profile-avatar" id="topAvatar">
+                        S
+                    </div>
+
+                    <div class="top-profile-info">
+
+                        <strong id="topUserName">
+                            Student
+                        </strong>
+
+                        <span id="topStudentId">
+                            Student ID
+                        </span>
+
+                    </div>
+
+                </a>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =================================================
+     CREDIT TRACKER CONTENT
+================================================== -->
+<div class="dashboard-content credit-tracker-page">
+
+    <!-- PAGE INTRO -->
+    <section class="credit-page-header">
+
+        <div>
+            <span class="hero-label">
+                ACADEMIC PROGRESS
+            </span>
+
+            <h2>Credit Tracker</h2>
+
+            <p>
+                Track your completed credits, remaining requirements,
+                and progress toward graduation.
+            </p>
+        </div>
+
+        <div class="credit-header-badge">
+            <span>Graduation Requirement</span>
+            <strong>130 Credits</strong>
+        </div>
+
+    </section>
+
+
+    <!-- MAIN CREDIT SUMMARY -->
+    <section class="credit-summary-grid">
+
+        <article class="credit-summary-card primary-credit-card">
+
+            <div class="credit-summary-top">
+                <span class="credit-card-icon">✓</span>
+                <span class="credit-card-label">
+                    COMPLETED CREDITS
+                </span>
+            </div>
+
+            <div class="credit-big-value">
+                <strong id="creditCompleted">0</strong>
+                <span>/ 130</span>
+            </div>
+
+            <p>
+                Credits successfully completed
+            </p>
+
+        </article>
+
+
+        <article class="credit-summary-card">
+
+            <div class="credit-summary-top">
+                <span class="credit-card-icon">→</span>
+                <span class="credit-card-label">
+                    REMAINING CREDITS
+                </span>
+            </div>
+
+            <div class="credit-big-value">
+                <strong id="creditRemaining">130</strong>
+                <span>credits</span>
+            </div>
+
+            <p>
+                Credits remaining for graduation
+            </p>
+
+        </article>
+
+
+        <article class="credit-summary-card">
+
+            <div class="credit-summary-top">
+                <span class="credit-card-icon">%</span>
+                <span class="credit-card-label">
+                    OVERALL PROGRESS
+                </span>
+            </div>
+
+            <div class="credit-big-value">
+                <strong id="creditPercentage">0</strong>
+                <span>%</span>
+            </div>
+
+            <p>
+                Overall degree completion
+            </p>
+
+        </article>
+
+    </section>
+
+
+    <!-- OVERALL GRADUATION PROGRESS -->
+    <section class="credit-panel graduation-panel">
+
+        <div class="credit-panel-header">
+
+            <div>
+                <span class="card-eyebrow">
+                    GRADUATION STATUS
+                </span>
+
+                <h3>Overall Credit Progress</h3>
+            </div>
+
+            <strong
+                class="graduation-percentage"
+                id="graduationPercentage"
+            >
+                0%
+            </strong>
+
+        </div>
+
+
+        <div class="graduation-progress-track">
+            <div
+                class="graduation-progress-fill"
+                id="graduationProgressFill"
+            ></div>
+        </div>
+
+
+        <div class="graduation-numbers">
+
+            <div>
+                <span>Completed</span>
+                <strong id="graduationCompleted">
+                    0 credits
+                </strong>
+            </div>
+
+            <div>
+                <span>Required</span>
+                <strong>130 credits</strong>
+            </div>
+
+            <div>
+                <span>Remaining</span>
+                <strong id="graduationRemaining">
+                    130 credits
+                </strong>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CATEGORY PROGRESS -->
+    <section class="credit-panel">
+
+        <div class="credit-panel-header">
+
+            <div>
+                <span class="card-eyebrow">
+                    CREDIT REQUIREMENTS
+                </span>
+
+                <h3>Progress by Category</h3>
+
+                <p>
+                    Review your completed credits across
+                    graduation requirement categories.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="credit-category-list">
+
+
+            <!-- GENERAL EDUCATION -->
+            <article
+                class="credit-category-item"
+                data-category="general"
+            >
+
+                <div class="credit-category-heading">
+
+                    <div>
+                        <span class="category-number">01</span>
+
+                        <div>
+                            <h4>Basic General Education</h4>
+                            <p>
+                                General education requirement
+                            </p>
+                        </div>
+                    </div>
+
+                    <strong>
+                        <span id="generalCompleted">0</span>
+                        /
+                        <span id="generalRequired">14</span>
+                    </strong>
+
+                </div>
+
+                <div class="category-progress-track">
+                    <div
+                        class="category-progress-fill"
+                        id="generalProgress"
+                    ></div>
+                </div>
+
+                <div class="category-progress-footer">
+                    <span id="generalPercentage">0% completed</span>
+                    <span id="generalRemaining">14 credits remaining</span>
+                </div>
+
+            </article>
+
+
+            <!-- BASIC UNDERGRADUATE -->
+            <article
+                class="credit-category-item"
+                data-category="undergraduate"
+            >
+
+                <div class="credit-category-heading">
+
+                    <div>
+                        <span class="category-number">02</span>
+
+                        <div>
+                            <h4>Basic Undergraduate</h4>
+                            <p>
+                                Undergraduate foundation courses
+                            </p>
+                        </div>
+                    </div>
+
+                    <strong>
+                        <span id="undergraduateCompleted">0</span>
+                        /
+                        <span id="undergraduateRequired">18</span>
+                    </strong>
+
+                </div>
+
+                <div class="category-progress-track">
+                    <div
+                        class="category-progress-fill"
+                        id="undergraduateProgress"
+                    ></div>
+                </div>
+
+                <div class="category-progress-footer">
+                    <span id="undergraduatePercentage">
+                        0% completed
+                    </span>
+
+                    <span id="undergraduateRemaining">
+                        18 credits remaining
+                    </span>
+                </div>
+
+            </article>
+
+
+            <!-- ENGINEERING BASIC -->
+            <article
+                class="credit-category-item"
+                data-category="engineering"
+            >
+
+                <div class="credit-category-heading">
+
+                    <div>
+                        <span class="category-number">03</span>
+
+                        <div>
+                            <h4>Basic Engineering</h4>
+                            <p>
+                                Engineering foundation requirement
+                            </p>
+                        </div>
+                    </div>
+
+                    <strong>
+                        <span id="engineeringCompleted">0</span>
+                        /
+                        <span id="engineeringRequired">0</span>
+                    </strong>
+
+                </div>
+
+                <div class="category-progress-track">
+                    <div
+                        class="category-progress-fill"
+                        id="engineeringProgress"
+                    ></div>
+                </div>
+
+                <div class="category-progress-footer">
+                    <span id="engineeringPercentage">
+                        Requirement depends on major
+                    </span>
+
+                    <span id="engineeringRemaining">
+                        Department requirement
+                    </span>
+                </div>
+
+            </article>
+
+
+            <!-- MAJOR -->
+            <article
+                class="credit-category-item"
+                data-category="major"
+            >
+
+                <div class="credit-category-heading">
+
+                    <div>
+                        <span class="category-number">04</span>
+
+                        <div>
+                            <h4>Major</h4>
+                            <p>
+                                Major required and elective courses
+                            </p>
+                        </div>
+                    </div>
+
+                    <strong>
+                        <span id="majorCompleted">0</span>
+                        <span> credits</span>
+                    </strong>
+
+                </div>
+
+                <div class="category-progress-track">
+                    <div
+                        class="category-progress-fill"
+                        id="majorProgress"
+                    ></div>
+                </div>
+
+                <div class="category-progress-footer">
+                    <span id="majorPercentage">
+                        Major progress
+                    </span>
+
+                    <span>
+                        Based on completed courses
+                    </span>
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    
+    <!-- =====================================================
+         COMPLETED COURSE HISTORY
+    ====================================================== -->
+
+    <section class="credit-panel completed-courses-panel">
+
+        <div class="credit-panel-header">
+
+            <div>
+
+                <span class="card-eyebrow">
+                    ACADEMIC HISTORY
+                </span>
+
+                <h3>
+                    Completed Courses
+                </h3>
+
+                <p>
+                    Add courses you completed in previous semesters.
+                    Search using the course code or course name.
+                </p>
+
+            </div>
+
+            <div class="completed-course-count">
+
+                <span>
+                    COMPLETED
+                </span>
+
+                <strong id="completedCourseCount">
+                    0 courses
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <!-- SEARCH AREA -->
+
+        <div class="completed-course-search-box">
+
+            <div class="completed-search-input-wrap">
+
+                <span class="completed-search-icon">
+                    &#128269;
+                </span>
+
+                <input
+                    type="text"
+                    id="completedCourseSearch"
+                    placeholder="Search course code or course name..."
+                    autocomplete="off"
+                >
+
+                <button
+                    type="button"
+                    id="clearCompletedSearch"
+                    class="completed-search-clear"
+                    aria-label="Clear search"
+                >
+                    &times;
+                </button>
+
+            </div>
+
+
+            <div
+                id="completedCourseSearchResults"
+                class="completed-course-search-results"
+            ></div>
+
+        </div>
+
+
+        <!-- SELECTED COURSE PREVIEW -->
+
+        <div
+            id="completedCoursePreview"
+            class="completed-course-preview"
+            hidden
+        >
+
+            <div class="completed-preview-main">
+
+                <div>
+
+                    <span
+                        class="completed-preview-code"
+                        id="completedPreviewCode"
+                    >
+                        COURSE CODE
+                    </span>
+
+                    <h4 id="completedPreviewName">
+                        Course Name
+                    </h4>
+
+                    <div class="completed-preview-meta">
+
+                        <span id="completedPreviewCategory">
+                            Category
+                        </span>
+
+                        <span>
+                            <strong id="completedPreviewCredits">
+                                0
+                            </strong>
+                            credits
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="completed-preview-actions">
+
+                <label>
+
+                    <span>
+                        Completed Semester
+                    </span>
+
+                    <select id="completedSemester">
+
+                        <option value="">
+                            Select semester
+                        </option>
+
+                        <option value="Spring 2023">
+                            Spring 2023
+                        </option>
+
+                        <option value="Fall 2023">
+                            Fall 2023
+                        </option>
+
+                        <option value="Spring 2024">
+                            Spring 2024
+                        </option>
+
+                        <option value="Fall 2024">
+                            Fall 2024
+                        </option>
+
+                        <option value="Spring 2025">
+                            Spring 2025
+                        </option>
+
+                        <option value="Fall 2025">
+                            Fall 2025
+                        </option>
+
+                        <option value="Spring 2026">
+                            Spring 2026
+                        </option>
+
+                        <option value="Fall 2026">
+                            Fall 2026
+                        </option>
+
+                    </select>
+
+                </label>
+
+
+                <button
+                    type="button"
+                    id="addCompletedCourseButton"
+                    class="primary-action completed-add-button"
+                >
+                    Add as Completed
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- STATUS MESSAGE -->
+
+        <div
+            id="completedCourseMessage"
+            class="completed-course-message"
+            hidden
+        ></div>
+
+
+        <!-- COMPLETED COURSE LIST -->
+
+        <div class="completed-course-list-header">
+
+            <div>
+
+                <h4>
+                    My Completed Courses
+                </h4>
+
+                <p>
+                    Courses added here automatically update
+                    your graduation credit progress.
+                </p>
+
+            </div>
+
+            <strong id="completedHistoryCredits">
+                0 credits
+            </strong>
+
+        </div>
+
+
+        <div
+            id="completedCourseList"
+            class="completed-course-list"
+        >
+
+            <div class="completed-course-empty">
+
+                <div class="completed-empty-icon">
+                    +
+                </div>
+
+                <strong>
+                    No completed courses added yet
+                </strong>
+
+                <p>
+                    Search above to add courses from
+                    your previous semesters.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         SCHOLARSHIP CREDIT REQUIREMENT
+    ====================================================== -->
+
+    <section class="credit-panel scholarship-credit-panel">
+
+        <div class="scholarship-credit-layout">
+
+            <div class="scholarship-credit-info">
+
+                <span class="card-eyebrow">
+                    SCHOLARSHIP CHECK
+                </span>
+
+                <h3>
+                    Scholarship Credit Requirement
+                </h3>
+
+                <p id="scholarshipRequirementDescription">
+                    Your required semester credits are determined
+                    automatically from your current year.
+                </p>
+
+
+                <div class="scholarship-rule-note">
+
+                    <div>
+                        <strong>1st - 3rd Year</strong>
+                        <span>Minimum 16 credits</span>
+                    </div>
+
+                    <div>
+                        <strong>4th Year</strong>
+                        <span>Minimum 12 credits</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="scholarship-status-card">
+
+                <div class="scholarship-status-top">
+
+                    <span>
+                        CURRENT SEMESTER
+                    </span>
+
+                    <strong id="scholarshipStudentYear">
+                        Student Year
+                    </strong>
+
+                </div>
+
+
+                <div class="scholarship-credit-value">
+
+                    <strong id="scholarshipCurrentCredits">
+                        0
+                    </strong>
+
+                    <span>
+                        /
+                        <span id="scholarshipRequiredCredits">
+                            16
+                        </span>
+                        credits
+                    </span>
+
+                </div>
+
+
+                <div class="scholarship-progress-track">
+
+                    <div
+                        id="scholarshipProgressFill"
+                        class="scholarship-progress-fill"
+                    ></div>
+
+                </div>
+
+
+                <div
+                    id="scholarshipCreditStatus"
+                    class="scholarship-credit-status"
+                >
+                    Credit requirement not met yet
+                </div>
+
+
+                <p
+                    id="scholarshipCreditRemaining"
+                    class="scholarship-credit-remaining"
+                >
+                    16 more credits needed
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="scholarship-disclaimer">
+
+            This tracker checks the semester credit requirement only.
+            Scholarship eligibility may also depend on GPA, academic
+            performance, university rules, and other requirements.
+
+        </div>
+
+    </section>
+
+    <!-- CREDIT INFORMATION -->
+    <section class="credit-bottom-grid">
+
+        <article class="credit-panel">
+
+            <div class="credit-panel-header">
+
+                <div>
+                    <span class="card-eyebrow">
+                        CREDIT SUMMARY
+                    </span>
+
+                    <h3>Your Academic Standing</h3>
+                </div>
+
+            </div>
+
+
+            <div class="credit-info-list">
+
+                <div>
+                    <span>Total Graduation Credits</span>
+                    <strong>130</strong>
+                </div>
+
+                <div>
+                    <span>Completed Credits</span>
+                    <strong id="summaryCompletedCredits">
+                        0
+                    </strong>
+                </div>
+
+                <div>
+                    <span>Remaining Credits</span>
+                    <strong id="summaryRemainingCredits">
+                        130
+                    </strong>
+                </div>
+
+                <div>
+                    <span>Minimum Semester Credits</span>
+                    <strong>12</strong>
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <article class="credit-panel credit-tip-panel">
+
+            <span class="card-eyebrow">
+                SMART PLAN
+            </span>
+
+            <h3>Stay on Track</h3>
+
+            <p>
+                Use Course Finder and My Timetable to plan
+                courses while monitoring your graduation
+                credit requirements here.
+            </p>
+
+            <div class="credit-tip-actions">
+
+                <a
+                    href="courses.html"
+                    class="primary-action"
+                >
+                    Find Courses →
+                </a>
+
+                <a
+                    href="timetable.html"
+                    class="secondary-action"
+                >
+                    My Timetable
+                </a>
+
+            </div>
+
+        </article>
+
+    </section>
+
+</div>
+
+    </main>
+
+</div>
+
+<script src="js/courses-data.js"></script>
+<script src="js/app.js"></script>
+<script src="js/credit-tracker.js"></script>
+
+</body>
+</html>
+
+
+
+
+

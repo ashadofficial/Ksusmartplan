@@ -1,0 +1,352 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Timetable | KSU SmartPlan</title>
+
+    <!-- Common application / sidebar CSS -->
+    <link
+        rel="stylesheet"
+        href="css/app.css"
+    >
+
+    <!-- Timetable page CSS -->
+    <link
+        rel="stylesheet"
+        href="css/timetable.css"
+    >
+
+    <!-- Inter Font -->
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+</head>
+
+
+<body>
+
+    <div class="app-layout">
+
+
+        <!-- =============================================
+             COMMON SIDEBAR
+        ============================================== -->
+
+        <div id="sidebarContainer"></div>
+
+
+        <!-- =============================================
+             MAIN CONTENT
+        ============================================== -->
+
+        <main class="main-content timetable-main">
+
+
+            <!-- TOP BAR -->
+
+            <header class="topbar">
+
+                <div>
+
+                    <span class="page-eyebrow">
+                        ACADEMIC PLANNING
+                    </span>
+
+                    <h1>
+                        Timetable
+                    </h1>
+
+                </div>
+
+
+                <div class="topbar-right">
+
+                    <div class="academic-status">
+                        Fall 2026
+                    </div>
+
+                    <div class="top-profile">
+
+                        <div
+                            class="top-profile-avatar"
+                            id="topProfileAvatar"
+                        >
+                            S
+                        </div>
+
+                        <div class="top-profile-info">
+
+                            <strong id="topProfileName">
+                                Student
+                            </strong>
+
+                            <span id="topProfileId">
+                                KSU Student
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- =============================================
+                 PAGE CONTENT
+            ============================================== -->
+
+            <div class="timetable-content">
+
+
+                <!-- HERO -->
+
+                <section class="timetable-hero">
+
+                    <div>
+
+                        <span class="hero-eyebrow">
+                            KSU SMARTPLAN
+                        </span>
+
+                        <h2>
+                            Build your weekly schedule.
+                        </h2>
+
+                        <p>
+                            Review your selected courses,
+                            class times and schedule conflicts.
+                        </p>
+
+                    </div>
+
+
+                    <div class="hero-stat">
+
+                        <strong id="plannedCourseCount">
+                            0
+                        </strong>
+
+                        <span>
+                            Planned Courses
+                        </span>
+
+                    </div>
+
+                </section>
+
+
+                <!-- SUMMARY -->
+
+                <section class="timetable-summary">
+
+                    <div class="summary-card">
+
+                        <span>
+                            Courses
+                        </span>
+
+                        <strong id="summaryCourseCount">
+                            0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="summary-card">
+
+                        <span>
+                            Total Credits
+                        </span>
+
+                        <strong id="summaryCreditCount">
+                            0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="summary-card">
+
+                        <span>
+                            Class Days
+                        </span>
+
+                        <strong id="summaryClassDays">
+                            0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="summary-card">
+
+                        <span>
+                            Conflicts
+                        </span>
+
+                        <strong id="summaryConflictCount">
+                            0
+                        </strong>
+
+                    </div>
+
+                </section>
+
+
+                <!-- TOOLBAR -->
+
+                <section class="timetable-toolbar">
+
+                    <div>
+
+                        <h3>
+                            Weekly Timetable
+                        </h3>
+
+                        <p>
+                            Monday â€“ Saturday
+                        </p>
+
+                    </div>
+
+
+                    <div class="toolbar-actions">
+
+                        <a
+                            href="courses.html"
+                            class="secondary-button"
+                        >
+                            + Add Courses
+                        </a>
+
+                        <button
+                            type="button"
+                            class="primary-button"
+                            id="clearTimetableButton"
+                        >
+                            Clear Timetable
+                        </button>
+
+                    </div>
+
+                </section>
+<!-- =============================================
+                     TIMETABLE GRID
+                ============================================== -->
+
+                <div class="timetable-grid-container">
+
+                    <div id="timetableGrid"></div>
+
+                </div>
+
+                <!-- CONFLICT MESSAGE -->
+
+                <div
+                    class="conflict-message"
+                    id="timetableConflictMessage"
+                    hidden
+                ></div>
+
+
+                <!-- =============================================
+                     WEEKLY GRID
+                ============================================== -->
+
+                <section class="weekly-card">
+
+                    <div
+                        class="weekly-grid"
+                        id="weeklyGrid"
+                    >
+
+                        <!-- timetable.js will render grid -->
+
+                    </div>
+
+                </section>
+
+
+                <!-- =============================================
+                     SELECTED COURSES
+                ============================================== -->
+
+                <section class="selected-section">
+
+                    <div class="section-heading">
+
+                        <div>
+
+                            <h3>
+                                Selected Courses
+                            </h3>
+
+                            <p>
+                                Courses currently included
+                                in your timetable.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="selected-course-list"
+                        id="timetableCourseList"
+                    >
+
+                        <!-- timetable.js will render courses -->
+
+                    </div>
+
+                </section>
+
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <!-- =============================================
+         JAVASCRIPT
+
+         Order matters:
+         auth -> sidebar -> course database -> timetable
+    ============================================== -->
+
+    <script src="js/auth.js"></script>
+
+    <script src="js/sidebar.js"></script>
+
+    <script src="js/courses-data.js"></script>
+
+    <script src="js/timetable.js"></script>
+
+
+</body>
+</html>
+

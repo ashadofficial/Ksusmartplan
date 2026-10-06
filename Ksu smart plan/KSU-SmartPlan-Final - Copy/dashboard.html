@@ -1,0 +1,909 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | KSU SmartPlan</title>
+
+    <!-- Dashboard / Application CSS -->
+    <link rel="stylesheet" href="css/app.css">
+
+    <!-- Inter Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+</head>
+
+<body>
+
+<div class="app-layout">
+
+
+    <!-- =====================================================
+         FIXED COLLAPSIBLE SIDEBAR
+    ====================================================== -->
+    <aside class="sidebar" id="sidebar">
+
+        <!-- SIDEBAR TOP -->
+        <div class="sidebar-top">
+
+            <!-- BRAND -->
+            <a href="dashboard.html" class="sidebar-brand">
+
+                <div class="sidebar-logo">
+                    <img
+                        src="assets/ksu-smartplan-logo.png"
+                        alt="KSU SmartPlan"
+                    >
+                </div>
+
+                <div class="sidebar-brand-text">
+                    <h2>KSU SmartPlan</h2>
+                    <p>KYUNGSUNG UNIVERSITY</p>
+                </div>
+
+            </a>
+
+
+            <!-- NAVIGATION -->
+            <nav class="sidebar-nav">
+
+                <p class="nav-section-label">
+                    MAIN MENU
+                </p>
+
+
+                <!-- DASHBOARD -->
+                <a
+                    href="dashboard.html"
+                    class="nav-item active"
+                    data-tooltip="Dashboard"
+                >
+                    <span class="nav-icon">
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            aria-hidden="true"
+                        >
+                            <path d="M3 3h7v7H3V3zm11 0h7v7h-7V3zM3 14h7v7H3v-7zm11 0h7v7h-7v-7z"/>
+                        </svg>
+
+                    </span>
+
+                    <span class="nav-text">
+                        Dashboard
+                    </span>
+                </a>
+
+
+                <!-- COURSE FINDER -->
+                <a
+                    href="courses.html"
+                    class="nav-item"
+                    data-tooltip="Course Finder"
+                >
+                    <span class="nav-icon">
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            aria-hidden="true"
+                        >
+                            <path d="M4 4h16v3H4V4zm0 6h16v3H4v-3zm0 6h10v3H4v-3z"/>
+                        </svg>
+
+                    </span>
+
+                    <span class="nav-text">
+                        Course Finder
+                    </span>
+                </a>
+
+
+                <!-- TIMETABLE -->
+                <a
+                    href="timetable.html"
+                    class="nav-item"
+                    data-tooltip="Timetable"
+                >
+                    <span class="nav-icon">
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            aria-hidden="true"
+                        >
+                            <path d="M7 2h2v2h6V2h2v2h3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h3V2zm13 8H4v10h16V10z"/>
+                        </svg>
+
+                    </span>
+
+                    <span class="nav-text">
+                        Timetable
+                    </span>
+                </a>
+
+
+                <!-- CREDIT TRACKER -->
+                <a
+                    href="credit-tracker.html"
+                    class="nav-item"
+                    data-tooltip="Credit Tracker"
+                >
+                    <span class="nav-icon">
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            aria-hidden="true"
+                        >
+                            <path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm2 4v10h2V7H7zm4 4v6h2v-6h-2zm4-3v9h2V8h-2z"/>
+                        </svg>
+
+                    </span>
+
+                    <span class="nav-text">
+                        Credit Tracker
+                    </span>
+                </a>
+
+
+                <!-- GPA CALCULATOR -->
+                <a
+                    href="gpa-calculator.html"
+                    class="nav-item"
+                    data-tooltip="GPA Calculator"
+                >
+                    <span class="nav-icon">
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            aria-hidden="true"
+                        >
+                            <path d="M5 2h14a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm2 4v3h10V6H7zm0 6v2h2v-2H7zm4 0v2h2v-2h-2zm4 0v2h2v-2h-2zm-8 4v2h2v-2H7zm4 0v2h2v-2h-2zm4 0v2h2v-2h-2z"/>
+                        </svg>
+
+                    </span>
+
+                    <span class="nav-text">
+                        GPA Calculator
+                    </span>
+                </a>
+
+
+                <p class="nav-section-label second-label">
+                    ACCOUNT
+                </p>
+
+
+                <!-- PROFILE -->
+                <a
+                    href="profile.html"
+                    class="nav-item"
+                    data-tooltip="Profile"
+                >
+                    <span class="nav-icon">
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            aria-hidden="true"
+                        >
+                            <path d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10zm0 2c-5 0-9 2.5-9 5.5V22h18v-2.5C21 16.5 17 14 12 14z"/>
+                        </svg>
+
+                    </span>
+
+                    <span class="nav-text">
+                        Profile
+                    </span>
+                </a>
+
+
+                <!-- SETTINGS -->
+                <a
+                    href="settings.html"
+                    class="nav-item"
+                    data-tooltip="Settings"
+                >
+                    <span class="nav-icon">
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            aria-hidden="true"
+                        >
+                            <path d="M19.4 13a7.8 7.8 0 0 0 .1-1 7.8 7.8 0 0 0-.1-1l2.1-1.6-2-3.4-2.5 1a8 8 0 0 0-1.7-1L15 3.3h-4L10.6 6a8 8 0 0 0-1.7 1l-2.5-1-2 3.4L6.5 11a7.8 7.8 0 0 0-.1 1 7.8 7.8 0 0 0 .1 1l-2.1 1.6 2 3.4 2.5-1a8 8 0 0 0 1.7 1l.4 2.7h4l.4-2.7a8 8 0 0 0 1.7-1l2.5 1 2-3.4L19.4 13zM13 15.5A3.5 3.5 0 1 1 13 8a3.5 3.5 0 0 1 0 7.5z"/>
+                        </svg>
+
+                    </span>
+
+                    <span class="nav-text">
+                        Settings
+                    </span>
+                </a>
+
+            </nav>
+
+        </div>
+
+
+        <!-- SIDEBAR BOTTOM / USER -->
+        <div class="sidebar-bottom">
+
+            <div class="sidebar-divider"></div>
+
+            <div class="sidebar-user">
+
+                <div class="user-avatar" id="sidebarAvatar">
+                    S
+                </div>
+
+                <div class="user-info">
+
+                    <strong id="sidebarUserName">
+                        Student
+                    </strong>
+
+                    <span id="sidebarUserDepartment">
+                        KSU Student
+                    </span>
+
+                </div>
+
+                <button
+                    type="button"
+                    class="logout-button"
+                    id="logoutButton"
+                    aria-label="Sign out"
+                    title="Sign out"
+                >
+                    â†ª
+                </button>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         MAIN APPLICATION AREA
+    ====================================================== -->
+    <main class="main-content">
+
+
+        <!-- =================================================
+             TOP HEADER
+        ================================================== -->
+        <header class="topbar">
+
+            <div class="topbar-title">
+
+                <span class="page-label">
+                    OVERVIEW
+                </span>
+
+                <h1>Dashboard</h1>
+
+            </div>
+
+
+            <div class="topbar-actions">
+
+                <div class="semester-chip">
+                    <span class="semester-dot"></span>
+
+                    <span id="currentSemester">
+                        Current Semester
+                    </span>
+                </div>
+
+
+                <a
+                    href="profile.html"
+                    class="top-profile"
+                >
+
+                    <div class="top-profile-avatar" id="topAvatar">
+                        S
+                    </div>
+
+                    <div class="top-profile-info">
+
+                        <strong id="topUserName">
+                            Student
+                        </strong>
+
+                        <span id="topStudentId">
+                            Student ID
+                        </span>
+
+                    </div>
+
+                </a>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =================================================
+             DASHBOARD CONTENT
+        ================================================== -->
+        <div class="dashboard-content">
+
+
+            <!-- WELCOME / HERO -->
+            <section class="dashboard-hero">
+
+                <div class="hero-copy">
+
+                    <span class="hero-label">
+                        KSU SMARTPLAN
+                    </span>
+
+                    <h2>
+                        Welcome back,
+                        <span id="welcomeName">Student</span>.
+                    </h2>
+
+                    <p>
+                        Keep your academic plan organized and stay
+                        on track toward graduation.
+                    </p>
+
+
+                    <div class="hero-actions">
+
+                        <a
+                            href="courses.html"
+                            class="primary-action"
+                        >
+                            Find Courses
+                            <span>â†’</span>
+                        </a>
+
+                        <a
+                            href="timetable.html"
+                            class="secondary-action"
+                        >
+                            View Timetable
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="hero-visual">
+
+                    <div class="hero-logo-ring">
+
+                        <img
+                            src="assets/ksu-smartplan-logo.png"
+                            alt="KSU SmartPlan"
+                        >
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 QUICK STATS
+            ================================================== -->
+            <section class="stats-grid">
+
+
+                <!-- GPA -->
+                <article class="stat-card">
+
+                    <div class="stat-card-top">
+
+                        <div class="stat-icon stat-icon-blue">
+                            GPA
+                        </div>
+
+                        <span class="stat-status">
+                            Current
+                        </span>
+
+                    </div>
+
+                    <p class="stat-label">
+                        Current GPA
+                    </p>
+
+                    <div class="stat-value-row">
+
+                        <strong id="dashboardGpa">
+                            0.00
+                        </strong>
+
+                        <span>/ 4.5</span>
+
+                    </div>
+
+                    <a href="gpa-calculator.html" class="stat-link">
+                        Calculate GPA â†’
+                    </a>
+
+                </article>
+
+
+
+                <!-- COMPLETED CREDITS -->
+                <article class="stat-card">
+
+                    <div class="stat-card-top">
+
+                        <div class="stat-icon">
+                            CR
+                        </div>
+
+                        <span class="stat-status">
+                            Completed
+                        </span>
+
+                    </div>
+
+                    <p class="stat-label">
+                        Completed Credits
+                    </p>
+
+                    <div class="stat-value-row">
+
+                        <strong id="completedCredits">
+                            0
+                        </strong>
+
+                        <span>credits</span>
+
+                    </div>
+
+                    <a href="credit-tracker.html" class="stat-link">
+                        View Progress â†’
+                    </a>
+
+                </article>
+
+
+
+                <!-- REMAINING CREDITS -->
+                <article class="stat-card">
+
+                    <div class="stat-card-top">
+
+                        <div class="stat-icon">
+                            RG
+                        </div>
+
+                        <span class="stat-status">
+                            Graduation
+                        </span>
+
+                    </div>
+
+                    <p class="stat-label">
+                        Remaining Credits
+                    </p>
+
+                    <div class="stat-value-row">
+
+                        <strong id="remainingCredits">
+                            130
+                        </strong>
+
+                        <span>credits</span>
+
+                    </div>
+
+                    <a href="credit-tracker.html" class="stat-link">
+                        Credit Tracker â†’
+                    </a>
+
+                </article>
+
+
+
+                <!-- PLANNED COURSES -->
+                <article class="stat-card">
+
+                    <div class="stat-card-top">
+
+                        <div class="stat-icon">
+                            CS
+                        </div>
+
+                        <span class="stat-status">
+                            Planned
+                        </span>
+
+                    </div>
+
+                    <p class="stat-label">
+                        Planned Courses
+                    </p>
+
+                    <div class="stat-value-row">
+
+                        <strong id="plannedCourseCount">
+                            0
+                        </strong>
+
+                        <span>courses</span>
+
+                    </div>
+
+                    <a href="courses.html" class="stat-link">
+                        Find Courses â†’
+                    </a>
+
+                </article>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 MAIN DASHBOARD GRID
+            ================================================== -->
+            <section class="dashboard-grid">
+
+
+                <!-- ACADEMIC PROGRESS -->
+                <article class="dashboard-card progress-card">
+
+                    <div class="card-heading">
+
+                        <div>
+
+                            <span class="card-eyebrow">
+                                ACADEMIC PROGRESS
+                            </span>
+
+                            <h3>
+                                Graduation Progress
+                            </h3>
+
+                        </div>
+
+                        <a href="credit-tracker.html">
+                            View details
+                        </a>
+
+                    </div>
+
+
+                    <div class="progress-summary">
+
+                        <div class="progress-circle">
+
+                            <div class="progress-circle-inner">
+
+                                <strong id="progressPercentage">
+                                    0%
+                                </strong>
+
+                                <span>
+                                    completed
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="progress-details">
+
+                            <div class="progress-detail">
+
+                                <span>
+                                    Completed
+                                </span>
+
+                                <strong id="progressCompleted">
+                                    0 credits
+                                </strong>
+
+                            </div>
+
+
+                            <div class="progress-detail">
+
+                                <span>
+                                    Required
+                                </span>
+
+                                <strong>
+                                    130 credits
+                                </strong>
+
+                            </div>
+
+
+                            <div class="progress-detail">
+
+                                <span>
+                                    Remaining
+                                </span>
+
+                                <strong id="progressRemaining">
+                                    130 credits
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="progress-bar">
+
+                        <div
+                            class="progress-bar-fill"
+                            id="graduationProgressBar"
+                        ></div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- STUDENT PROFILE SUMMARY -->
+                <article class="dashboard-card student-card">
+
+                    <div class="card-heading">
+
+                        <div>
+
+                            <span class="card-eyebrow">
+                                STUDENT PROFILE
+                            </span>
+
+                            <h3>
+                                Academic Information
+                            </h3>
+
+                        </div>
+
+                        <a href="profile.html">
+                            Edit
+                        </a>
+
+                    </div>
+
+
+                    <div class="student-summary">
+
+                        <div class="summary-row">
+
+                            <span>
+                                Student ID
+                            </span>
+
+                            <strong id="summaryStudentId">
+                                â€”
+                            </strong>
+
+                        </div>
+
+
+                        <div class="summary-row">
+
+                            <span>
+                                Department
+                            </span>
+
+                            <strong id="summaryDepartment">
+                                â€”
+                            </strong>
+
+                        </div>
+
+
+                        <div class="summary-row">
+
+                            <span>
+                                Academic Year
+                            </span>
+
+                            <strong id="summaryAcademicYear">
+                                â€”
+                            </strong>
+
+                        </div>
+
+
+                        <div class="summary-row">
+
+                            <span>
+                                Semester
+                            </span>
+
+                            <strong id="summarySemester">
+                                â€”
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- QUICK ACTIONS -->
+                <article class="dashboard-card quick-actions-card">
+
+                    <div class="card-heading">
+
+                        <div>
+
+                            <span class="card-eyebrow">
+                                QUICK ACCESS
+                            </span>
+
+                            <h3>
+                                Academic Tools
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="quick-actions">
+
+                        <a
+                            href="courses.html"
+                            class="quick-action"
+                        >
+
+                            <div class="quick-action-icon">
+                                01
+                            </div>
+
+                            <div>
+                                <strong>
+                                    Find Courses
+                                </strong>
+
+                                <span>
+                                    Search by department and year
+                                </span>
+                            </div>
+
+                            <b>â†’</b>
+
+                        </a>
+
+
+                        <a
+                            href="timetable.html"
+                            class="quick-action"
+                        >
+
+                            <div class="quick-action-icon">
+                                02
+                            </div>
+
+                            <div>
+                                <strong>
+                                    Build Timetable
+                                </strong>
+
+                                <span>
+                                    Organize your weekly schedule
+                                </span>
+                            </div>
+
+                            <b>â†’</b>
+
+                        </a>
+
+
+                        <a
+                            href="gpa-calculator.html"
+                            class="quick-action"
+                        >
+
+                            <div class="quick-action-icon">
+                                03
+                            </div>
+
+                            <div>
+                                <strong>
+                                    Calculate GPA
+                                </strong>
+
+                                <span>
+                                    Check your academic performance
+                                </span>
+                            </div>
+
+                            <b>â†’</b>
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- CURRENT PLAN -->
+                <article class="dashboard-card plan-card">
+
+                    <div class="card-heading">
+
+                        <div>
+
+                            <span class="card-eyebrow">
+                                CURRENT PLAN
+                            </span>
+
+                            <h3>
+                                This Semester
+                            </h3>
+
+                        </div>
+
+                        <a href="timetable.html">
+                            Open timetable
+                        </a>
+
+                    </div>
+
+
+                    <div
+                        class="empty-plan"
+                        id="dashboardPlan"
+                    >
+
+                        <div class="empty-plan-icon">
+                            +
+                        </div>
+
+                        <strong>
+                            No courses planned yet
+                        </strong>
+
+                        <p>
+                            Add courses from Course Finder to start
+                            building your semester plan.
+                        </p>
+
+                        <a href="courses.html">
+                            Browse Courses
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </section>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="js/courses-data.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
+
+
